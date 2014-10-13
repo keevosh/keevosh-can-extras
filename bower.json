@@ -1,0 +1,27 @@
+{
+    "name": "kvsh-can-extras",
+    "version": "0.0.1",
+    "homepage": "http://www.keevosh.com/oss/can-extras",
+    "authors": [
+        "Keevosh Software House <info@keevosh.com>",
+        "Aggelos Karalias <aggelos.karalias@keevosh.com>"
+    ],
+    "description": "Reusable can.js parts.",
+    "main": "kvsh/kvsh.js",
+    "license": "Apache",
+    "private": false,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "moment": "~2.6.0",
+        "noty": "~2.2.2",
+        "jquerypp": "~1.0.1",
+        "steal": "0.3.0",
+        "canjs": "git://github.com/bitovi/canjs.git#minor"
+    }
+}
