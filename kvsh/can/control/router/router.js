@@ -81,7 +81,7 @@ var Router = Control.extend(
 
         var self = this,
             controllers = el.controls(),
-            deRender = true;
+            doRender = true;
 
         controllers.forEach(function(c, i) {
             c = controllers[i];
