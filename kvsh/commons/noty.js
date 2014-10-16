@@ -1,8 +1,8 @@
 import $ from "jquery";
-import noty from "noty/jquery.noty.js"; // noty may not be the exposed object
-import Utils from "app/common/utils.js";
-import "noty/layouts/topRight.js";
-import "noty/themes/default.js";
+import noty from "noty/jquery.noty"; // noty may not be the exposed object
+import Utils from "app/common/utils";
+import "noty/layouts/topRight";
+import "noty/themes/default";
 
 var _default = {
         layout: "topRight",

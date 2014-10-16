@@ -1,5 +1,5 @@
 import $ from "jquery";
-import Noty from "kvsh/commons/noty.js";
+import Noty from "kvsh/commons/noty";
 
 $.QueryString = (function(a) {
     if (a == "") return {};

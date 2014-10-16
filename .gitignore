@@ -33,6 +33,7 @@ node_modules
 
 ### Bower ###
 bower_components
+js_libs_bower
 
 
 ### NetBeans ###

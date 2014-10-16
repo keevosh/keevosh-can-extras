@@ -1,6 +1,6 @@
 import can from "can/";
 import $ from "jquery";
-import Utils from "kvsh/commons/utils.js"''
+import Utils from "kvsh/commons/utils";
 import Noty from "kvsh/commons/noty";
 
 var AjaxUtils = {

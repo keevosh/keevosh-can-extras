@@ -2,8 +2,9 @@ import can from "can/";
 import Construct from "can/construct/";
 import Control from "can/control/";
 import Utils from "kvsh/commons/utils.js";
-import PushState from "can/route/pushstate/";
-import Route from "can/control/route/";
+import "can/route/pushstate/";
+import "can/control/route/";
+import "can/control/plugin/";
 
 /**
  *

@@ -7,10 +7,13 @@ var URL_PARSER = /^(?:([^:\/?\#]+):)?(?:\/\/([^\/?\#]*))?([^?\#]*)(?:\?([^\#]*))
     Utils = {
         isSecure: (window.location.protocol == "https:"),
 
-        pushState: function(title, data, path) {
+        pushState: function(title, path) {
+            if(arguments.length === 1) {
+                path = title;
+                title = null;
+            }
+
             history.pushState(title, null, path);
-            //can.route.history.attr("path", path);
-            //can.route.history.attr("type", "pushState");
         },
 
         uuid: function() {
