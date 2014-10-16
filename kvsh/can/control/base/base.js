@@ -1,5 +1,5 @@
 import can from "can/";
-import Control from "can/control";
+import Control from "can/control/";
 
 /**
  * @class Base is the parent can controller for Keevosh projects.
