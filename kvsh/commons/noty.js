@@ -1,6 +1,6 @@
 import $ from "jquery";
 import noty from "noty/jquery.noty"; // noty may not be the exposed object
-import Utils from "app/common/utils";
+import Utils from "kvsh/commons/utils";
 import "noty/layouts/topRight";
 import "noty/themes/default";
 
