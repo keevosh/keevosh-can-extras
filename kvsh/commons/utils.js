@@ -170,6 +170,5 @@ var cache = (function() {
     };
 })();
 
-// setup shortcuts to Utils for performance
 export {cache};
 export default Utils;

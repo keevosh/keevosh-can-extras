@@ -1,0 +1,19 @@
+{{#paginate.hasMoreThanOnePages}}
+<div>
+    <a href="" class="pager-link first {{^paginate.canStart}}disabled{{/paginate.canStart}}">First</a>
+    &nbsp;<a href="" class="pager-link prev {{^paginate.canPrev}}disabled{{/paginate.canPrev}}">Prev</a>
+    &nbsp;&nbsp;
+    {{#paginate.canPrevPages}}...{{/paginate.canPrevPages}}
+    &nbsp;
+
+    {{#paginate.pages}}
+    <a href="" data-id="{{index}}" class="pager-link page {{#paginate.isCurrent}}active{{/paginate.isCurrent}}">{{{print_2chars_index index}}}</a>
+    {{/paginate.pages}}
+
+    &nbsp;
+    {{#paginate.canNextPages}}...{{/paginate.canNextPages}}
+    &nbsp;&nbsp;
+    &nbsp;<a href="" class="pager-link next {{^paginate.canNext}}disabled{{/paginate.canNext}}">Next</a>
+    &nbsp;<a href="" class="pager-link last {{^paginate.canEnd}}disabled{{/paginate.canEnd}}">Last</a>
+</div>
+{{/paginate.hasMoreThanOnePages}}
