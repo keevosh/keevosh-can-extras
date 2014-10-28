@@ -1,6 +1,6 @@
 import can from "can/util/";
 import Component from "can/component/";
-import initView from "./views/init.mustache!";
+import initView from "./views/init.stache!";
 
 /**
  * Pager is responsible to display the pagination state (current page, next-previous
