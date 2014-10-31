@@ -130,11 +130,9 @@ var Paginate = Map.extend({
     last: function(){
         this.attr("page", Math.ceil(this.attr("count")/this.attr("limit")));
     },
-    isCurrent: function(t,e){
-        var paginate = e._parent._parent._context.paginate,
-            index = can.isFunction(t.attr) ? t.attr("index") : t.index;
-
-        return paginate.attr("offset") == (index - 1) * paginate.attr("limit");
+    isCurrent: function(index) {
+        index = (typeof index === 'object') ? index.index : index;
+        return this.attr("offset") == (index - 1) * this.attr("limit");
     },
     calcPages: function() {
         var pages = [],

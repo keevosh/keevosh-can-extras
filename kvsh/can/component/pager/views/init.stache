@@ -7,7 +7,7 @@
     &nbsp;
 
     {{#paginate.pages}}
-    <a href="" data-id="{{index}}" class="pager-link page {{#paginate.isCurrent}}active{{/paginate.isCurrent}}">{{{print_2chars_index index}}}</a>
+    <a href="" data-id="{{index}}" class="pager-link page {{#paginate.isCurrent index}}active{{/paginate.isCurrent}}">{{{print_2chars_index index}}}</a>
     {{/paginate.pages}}
 
     &nbsp;
