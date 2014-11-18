@@ -17,7 +17,7 @@ var Pager = Component.extend({
             return this.attr("paginate.pageCount");
         },
         print_2chars_index: function(index) {
-            return index < 10 ? "&nbsp;"+index : index;
+            return index < 10 ? " "+index : index;
         }
     },
     template: initView,

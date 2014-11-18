@@ -3,7 +3,7 @@
  * by a compatible loader like StealJS.
  */
 
-steal("kvsh/commons/utils", function(Utils) {
+steal("kvsh/commons/utils.js", function(Utils) {
 
   return Utils;
 });

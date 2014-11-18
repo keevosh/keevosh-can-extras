@@ -1,5 +1,5 @@
-steal("can/", "can/construct/", "can/control/", "kvsh/commons/utils",
-"can/route/pushstate/", "can/control/route/", "can/control/plugin/",
+steal("can/", "can/construct/", "can/control/", "kvsh/commons/utils.js",
+"can/route/", "can/control/route/", "can/control/plugin/",
 function(can, Construct, Control, Utils) {
 
 /**

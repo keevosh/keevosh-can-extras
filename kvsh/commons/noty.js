@@ -1,5 +1,5 @@
-steal("jquery", "noty/jquery.noty", "kvsh/commons/utils",
-"noty/layouts/topRight", "noty/themes/default",
+steal("jquery", "noty/jquery.noty.js", "kvsh/commons/utils.js",
+"noty/layouts/topRight.js", "noty/themes/default.js",
 function($, noty, Utils) {
 
 var _default = {

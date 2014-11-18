@@ -1,4 +1,4 @@
-steal("can/", "jquery", "kvsh/commons/utils", "kvsh/commons/noty",
+steal("can/", "jquery", "kvsh/commons/utils.js", "kvsh/commons/noty.js",
 function(can, $, Utils, Noty) {
 
 var AjaxUtils = {
