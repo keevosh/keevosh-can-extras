@@ -1,4 +1,4 @@
-import Control from "./base/";
+import Control from "../base/";
 
 /**
  * @class Modal
