@@ -1,5 +1,5 @@
-import can from "can/util/";
-import Map from "can/map/define/";
+steal("can/util/", "can/map/define/",
+function(can, Map) {
 
 /**
  * Paginate object is used to keep a state for pageable data. Usually an instance
@@ -171,4 +171,6 @@ var Paginate = Map.extend({
     }
 });
 
-export default Paginate;
+return Paginate;
+
+});

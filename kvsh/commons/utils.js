@@ -1,6 +1,5 @@
-import $ from "jquery";
-import can from "can/"
-import Map from "can/map/";
+steal("jquery", "can/", "can/map/",
+function($, can, Map) {
 
 // Based on the regex in RFC2396 Appendix B.
 var URL_PARSER = /^(?:([^:\/?\#]+):)?(?:\/\/([^\/?\#]*))?([^?\#]*)(?:\?([^\#]*))?(?:\#(.*))?/,
@@ -170,5 +169,9 @@ var cache = (function() {
     };
 })();
 
-export {cache};
-export default Utils;
+Utils.cache = cache;
+
+return Utils;
+
+});
+

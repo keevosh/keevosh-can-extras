@@ -1,6 +1,5 @@
-import can from "can/util/";
-import Component from "can/component/";
-import initView from "./views/init.stache!";
+steal("can/util/", "can/component/", "./views/init.stache!",
+function(can, Component, initView) {
 
 /**
  * Grid component is like an 'advanced' table that we can attach functionality to.
@@ -49,4 +48,6 @@ var Grid = Component.extend({
     }
 });
 
-export default Grid;
+return Grid;
+
+});

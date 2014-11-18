@@ -1,4 +1,4 @@
-import Control from "../base/";
+steal("../base/", function(Control) {
 
 /**
  * @class Modal
@@ -71,4 +71,6 @@ var Modal = Control.extend(
   }
 });
 
-export default Modal;
+return Modal;
+
+});

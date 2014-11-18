@@ -1,8 +1,6 @@
-import $ from "jquery";
-import noty from "noty/jquery.noty"; // noty may not be the exposed object
-import Utils from "kvsh/commons/utils";
-import "noty/layouts/topRight";
-import "noty/themes/default";
+steal("jquery", "noty/jquery.noty", "kvsh/commons/utils",
+"noty/layouts/topRight", "noty/themes/default",
+function($, noty, Utils) {
 
 var _default = {
         layout: "topRight",
@@ -33,4 +31,6 @@ var _default = {
         }
     };
 
-export default Noty;
+return Noty;
+
+});

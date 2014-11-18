@@ -1,7 +1,5 @@
-import can from "can/";
-import stache from "can/view/stache/";
-import moment from "moment/";
-import momentPreciseRange from "moment-precise-range/";
+steal("can/", "can/view/stache/", "moment/", "moment-precise-range/",
+function(can, stache, moment, momentPreciseRange) {
 
 /**
  * If given value is function the it returns the result of val.call() otherwise
@@ -231,4 +229,6 @@ can.each(viewHelpers, function (fn, name) {
     stache.registerHelper(name, fn);
 });
 
-export default viewHelpers;
+return viewHelpers;
+
+});

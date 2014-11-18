@@ -1,4 +1,4 @@
-import $ from "jquery";
+steal("jquery", function($) {
 
 $.QueryString = (function(a) {
     if (a == "") return {};
@@ -87,3 +87,5 @@ String.format = function() {
 String.prototype.format = function() {
     return String.format.apply(String, [this].concat(Array.prototype.slice.call(arguments)));
 };
+
+});

@@ -1,10 +1,6 @@
-import can from "can/";
-import Construct from "can/construct/";
-import Control from "can/control/";
-import Utils from "kvsh/commons/utils";
-import "can/route/pushstate/";
-import "can/control/route/";
-import "can/control/plugin/";
+steal("can/", "can/construct/", "can/control/", "kvsh/commons/utils",
+"can/route/pushstate/", "can/control/route/", "can/control/plugin/",
+function(can, Construct, Control, Utils) {
 
 /**
  *
@@ -121,5 +117,6 @@ var Router = Control.extend(
 
 });
 
-export {RouteData};
-export default Router;
+return Router;
+
+});

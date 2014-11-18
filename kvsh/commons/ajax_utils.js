@@ -1,7 +1,5 @@
-import can from "can/";
-import $ from "jquery";
-import Utils from "kvsh/commons/utils";
-import Noty from "kvsh/commons/noty";
+steal("can/", "jquery", "kvsh/commons/utils", "kvsh/commons/noty",
+function(can, $, Utils, Noty) {
 
 var AjaxUtils = {
     makeButtonLoading: function(buttonEl, text) {
@@ -88,4 +86,6 @@ var AjaxUtils = {
     }
 };
 
-export default AjaxUtils;
+return AjaxUtils;
+
+});

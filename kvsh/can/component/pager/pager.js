@@ -1,6 +1,5 @@
-import can from "can/util/";
-import Component from "can/component/";
-import initView from "./views/init.stache!";
+steal("can/util/", "can/component/", "./views/init.stache!",
+function(can, Component, initView) {
 
 /**
  * Pager is responsible to display the pagination state (current page, next-previous
@@ -48,4 +47,6 @@ var Pager = Component.extend({
     }
 });
 
-export default Pager;
+return Pager;
+
+});

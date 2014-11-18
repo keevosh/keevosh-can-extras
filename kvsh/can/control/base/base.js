@@ -1,5 +1,5 @@
-import can from "can/";
-import Control from "can/control/";
+steal("can/", "can/control/",
+function(can, Control) {
 
 /**
  * @class Base is the parent can controller for Keevosh projects.
@@ -45,4 +45,6 @@ var base = Control.extend(
     }
 });
 
-export default base;
+return base;
+
+});

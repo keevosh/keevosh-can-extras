@@ -1,3 +1,5 @@
+steal(function() {
+
 var timezones = [
     {"Pacific/Midway": "(UTC -11:00) Midway, Niue, Pago Pago"},
     {"America/Adak": "(UTC -10:00) Adak"},
@@ -328,4 +330,6 @@ var countries = [
     {"ZW": "Zimbabwe"}
 ];
 
-export {timezones, countries};
+return {timezones: timezones, countries: countries};
+
+});
