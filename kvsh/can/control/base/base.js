@@ -34,7 +34,9 @@ var base = Control.extend(
         var self = this,
             rendered = can.Deferred(),
             viewData = options || this.options, // set viewData to be controller's options
-            viewOptions = { helpers: viewData.helpers, partials: viewData.partials };
+            viewHelpers = viewData.helpers.serialize ? viewData.helpers.serialize() : viewData.helpers,
+            viewPartials = viewData.partials.serialize ? viewData.partials.serialize() : viewData.partials,
+            viewOptions = { helpers: viewHelpers, partials: viewPartials };
 
         this.element.html("");
         can.view.renderAs("fragment", this.options.initView, viewData, viewOptions, function(frag) {

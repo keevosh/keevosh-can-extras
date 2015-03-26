@@ -1,7 +1,6 @@
 import can from "can/";
 import stache from "can/view/stache/";
 import moment from "moment/";
-import momentPreciseRange from "moment-precise-range/";
 
 /**
  * If given value is function the it returns the result of val.call() otherwise
@@ -224,6 +223,27 @@ var viewHelpers = {
         avatar = _get_compute_value(avatar);
         size = _get_compute_value(size);
         return "https://www.gravatar.com/avatar/{0}?s={1}&d=wavatar".format(avatar, size);
+    },
+
+    'route_link': function(link, text, options) {
+      text = _get_compute_value(text);
+      link = _get_compute_value(link);      
+      link = link.substr(1, link.length);
+      var newLink = link.indexOf('/') > -1 ? link.substr(link.indexOf('/') + 1, link.length) : link;
+      var data = {route: newLink};
+      var attrs = {};
+
+      if(options) {
+        for(var key in options.hash) {
+          if(key !== 'className') {
+            data[key] = _get_compute_value(options.hash[key]);
+          }
+          else {
+            attrs.className = options.hash[key];
+          }
+        }
+      }
+      return text === '_href' ? can.route.url(data, false) : can.route.link(text, data, attrs, false);
     }
 };
 

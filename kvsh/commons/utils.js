@@ -149,7 +149,19 @@ var URL_PARSER = /^(?:([^:\/?\#]+):)?(?:\/\/([^\/?\#]*))?([^?\#]*)(?:\?([^\#]*))
             });
 
             return list;
-        }
+        },
+        hasFlash : function() {
+			var ax = (typeof navigator.plugins == "undefined" || navigator.plugins.length == 0) ;
+			if(!ax){
+				return navigator.plugins["Shockwave Flash"];
+			}else{
+				try{
+					return !!(new ActiveXObject("ShockwaveFlash.ShockwaveFlash"));
+				}catch(e){
+					return false;
+				}
+			}
+		}
     };
 
 var cache = (function() {
@@ -169,6 +181,7 @@ var cache = (function() {
         }
     };
 })();
+
 
 export {cache};
 export default Utils;

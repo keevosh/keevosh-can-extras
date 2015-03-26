@@ -1,36 +1,54 @@
 import $ from "jquery";
-import noty from "noty/jquery.noty"; // noty may not be the exposed object
 import Utils from "kvsh/commons/utils";
+import noty from "noty/jquery.noty";
 import "noty/layouts/topRight";
-import "noty/themes/default";
+import "noty/themes/relax";
+import "animate/animate.css!$less";
 
-var _default = {
-        layout: "topRight",
-        theme: "defaultTheme",
-        speed: 0,
-        timeout : 3500,
-        animation: {
-            open: {height: 'toggle'},
-            close: {height: 'toggle'},
-            easing: 'swing',
-            speed: 150 // opening & closing animation speed
-        },
-        maxVisible: 6,
-        closeWith: ['button']
-    },
-    Noty = {
-        INFO: "success",
-        SUCCESS: "success",
-        ERROR: "error",
-        WARN: "alert",
+$.noty.defaults = {
+  layout: "topRight",
+  theme: 'relax', // or 'relax'
+  type: 'alert',
+  text: '', // can be html or string
+  dismissQueue: true, // If you want to use queue feature set this true
+  template: '<div class="noty_message"><span class="noty_text"></span><div class="noty_close"></div></div>',
+  animation: {
+      open: 'animated bounceInRight', // Animate.css class names
+      close: 'animated flipOutX' // Animate.css class names
+      //, easing: 'swing',
+      //, speed: 500 // opening & closing animation speed
+  },
+  timeout : 4500, // delay for closing event. Set false for sticky notifications
+  force: false, // adds notification to the beginning of queue when set to true
+  modal: false,
+  maxVisible: 6, // you can set max visible notification for dismissQueue true option,
+  killer: false, // for close all notifications before show
+  closeWith: ['button'], // ['click', 'button', 'hover', 'backdrop'] // backdrop click will close all notifications
+  callback: {
+      onShow: $.noop,
+      afterShow: $.noop,
+      onClose: $.noop,
+      afterClose: $.noop,
+      onCloseClick: $.noop
+  },
+  buttons: false // an array of buttons
+};
 
-        showMessage: function(level, message, buttons) {
-            var opts = can.extend({}, _defaults, {
-                type: level,
-                text: message
-            });
-            noty(opts);
-        }
-    };
+var Noty = {
+  INFO: "information",
+  SUCCESS: "success",
+  WARN: "warning",
+  ERROR: "error",
+  ALERT: "alert",
+  CONFIRM: "confirmation",
+
+  showMessage: function(level, message, opts) {
+      opts = can.extend({}, opts, {
+          type: level,
+          text: message
+      });
+      return noty(opts);
+  }
+};
 
 export default Noty;

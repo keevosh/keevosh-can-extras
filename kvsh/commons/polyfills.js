@@ -77,8 +77,9 @@ String.format = function() {
     for (var i = 1; i < arguments.length; i++) {
         // "gm" = RegEx options for Global search (more than one instance)
         // and for Multiline search
-        var regEx = new RegExp("\\{" + (i - 1) + "\\}", "gm");
-        theString = theString.replace(regEx, arguments[i]);
+        var regEx = new RegExp("\\{" + (i - 1) + "\\}", "gm"),
+			arg = (typeof(arguments[i]) === 'string') ? arguments[i].replace(/\$/g, "$$$") : arguments[i];
+        theString = theString.replace(regEx, arg);
     }
 
     return theString;
@@ -86,4 +87,38 @@ String.format = function() {
 // this is useful for expressions like "My name is {0}".format("aggelos"))
 String.prototype.format = function() {
     return String.format.apply(String, [this].concat(Array.prototype.slice.call(arguments)));
+};
+
+window.whichTransitionEvent = function()  {
+  var t;
+  var el = document.createElement('fakeelement');
+  var transitions = {
+    'transition':'transitionend',
+    'OTransition':'oTransitionEnd',
+    'MozTransition':'transitionend',
+    'WebkitTransition':'webkitTransitionEnd'
+  }
+
+  for(t in transitions){
+    if( el.style[t] !== undefined ){
+      return transitions[t];
+    }
+  }
+};
+
+window.whichAnimationEvent = function()  {
+  var a;
+  var el = document.createElement('fakeelement');
+  var animations = {
+    'animation':'animationend',
+    'OAnimation':'oAnimationEnd',
+    'MozAnimation':'animationend',
+    'WebkitAnimation':'webkitAnimationEnd'
+  }
+
+  for(a in animations){
+    if( el.style[a] !== undefined ){
+      return animations[a];
+    }
+  }
 };
