@@ -1,5 +1,5 @@
-steal("can/", "can/view/stache/", "moment/", "moment-precise-range/",
-function(can, stache, moment, momentPreciseRange) {
+steal("can/", "can/view/stache/", "moment/",
+function(can, stache, moment) {
 
 /**
  * If given value is function the it returns the result of val.call() otherwise
