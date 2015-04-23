@@ -22,6 +22,6 @@
         "noty": "~2.2.2",
         "jquerypp": "~1.0.1",
         "steal": "0.7.4",
-        "canjs": "git://github.com/bitovi/canjs.git#minor"
+        "canjs": "git://github.com/keevosh/canjs.git#minor"
     }
 }
