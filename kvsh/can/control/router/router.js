@@ -74,7 +74,7 @@ var Router = Control.extend(
     setSingleController: function(el, ControllerClass, controllerOptions, options) {
         options = can.extend({
             keepOthers: false,
-            update: false
+            update: true
         }, options);
 
         var self = this,
