@@ -19,8 +19,8 @@
     ],
     "dependencies": {
         "moment": "~2.6.0",
-        "noty": "~2.2.2",
-        "jquerypp": "~1.0.1",
+        "noty": "~2.3.0",
+        "jquerypp": "~2.0.0",
         "steal": "0.7.4",
         "canjs": "git://github.com/keevosh/canjs.git#minor"
     }
