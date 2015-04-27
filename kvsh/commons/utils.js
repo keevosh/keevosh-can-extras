@@ -164,7 +164,7 @@ var URL_PARSER = /^(?:([^:\/?\#]+):)?(?:\/\/([^\/?\#]*))?([^?\#]*)(?:\?([^\#]*))
 		}
     };
 
-var cache = (function() {
+var caches = (function() {
     var localData = can.Map();
     return {
         get: function(ns) {
@@ -182,6 +182,8 @@ var cache = (function() {
     };
 })();
 
+var cache = caches.get('global');
 
+export {caches};
 export {cache};
 export default Utils;

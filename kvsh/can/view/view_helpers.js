@@ -96,7 +96,7 @@ var viewHelpers = {
         op1 = _get_compute_value(op1);
         op2 = _get_compute_value(op2);
 
-        var ctx = _prunt_context.call(this, options);
+        var ctx = _prune_context.call(this, options);
         return (op1 === op2) ? options.fn(ctx) : options.inverse(ctx);
     },
 
@@ -227,7 +227,7 @@ var viewHelpers = {
 
     'route_link': function(link, text, options) {
       text = _get_compute_value(text);
-      link = _get_compute_value(link);      
+      link = _get_compute_value(link);
       link = link.substr(1, link.length);
       var newLink = link.indexOf('/') > -1 ? link.substr(link.indexOf('/') + 1, link.length) : link;
       var data = {route: newLink};

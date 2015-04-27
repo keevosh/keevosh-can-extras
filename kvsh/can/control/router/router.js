@@ -1,6 +1,7 @@
 import can from "can/";
 import Construct from "can/construct/";
 import Control from "can/control/";
+import "can/control/route/";
 import Utils from "kvsh/commons/utils";
 import "can/control/plugin/";
 
