@@ -21,7 +21,7 @@
         "moment": "~2.10.0",
         "noty": "~2.3.0",
         "jquerypp": "~2.0.0",
-        "steal": "~0.9.0",
+        "steal": "~0.10.0",
         "canjs": "git://github.com/keevosh/canjs.git#minor"
     }
 }
